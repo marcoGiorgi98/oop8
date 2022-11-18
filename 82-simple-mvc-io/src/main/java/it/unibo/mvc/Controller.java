@@ -13,15 +13,19 @@ import java.io.OutputStream;
  * Application controller. Performs the I/O.
  */
 public class Controller {           //fatto io
-    File file;
-    
-    public Controller(File file) {
-        this.file=file;
+    private File file;
+    //private String pat =System.getProperty("user.home");
+    private String sep= System.getProperty("file.separator");
+    private String pat="C:"+sep+"Users"+sep+"rikys"+sep+"defolt.txt";
+   
+    public Controller() {
+        //this.file=file;
+        
 
     }
-    public void setFile(String filee){
-        this.file=new File(filee);
-        
+    public void setFile(){
+        //this.file=new File(filee);
+        this.file=new File("C:\\Users\\rikys\\defolt.txt");
     }
     public File getFile(){
         return this.file;
